@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+  </head>
+  <body>
+    <h1>Table</h1>
+    Enter table no: <input type="number" id="ip1" /> <br /><br />
+    Start table no: <input type="number" id="ip2" /> <br /><br />
+    End table no: <input type="number" id="ip3" /> <br /><br />
+    <button onclick="showTable()">Submit</button>
+    <p id="res"></p>
+
+    <script>
+      function showTable() {
+        num = document.getElementById("ip1").value;
+        startnum = document.getElementById("ip2").value;
+        endnum = document.getElementById("ip3").value;
+
+        for (i = startnum; i <= endnum; i++) {
+          // document.getElementById("res").innerHTML +=i * num + "<br>"  // sirf puree table ko print karne ke liye
+
+          if (i == startnum) {
+            document.getElementById("res").innerHTML = num + " * " + i + " = ";
+            document.getElementById("res").innerHTML += i * num + "<br>";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
