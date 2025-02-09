@@ -10,7 +10,7 @@
     Enter table no: <input type="number" id="ip1" /> <br /><br />
     Start table no: <input type="number" id="ip2" /> <br /><br />
     End table no: <input type="number" id="ip3" /> <br /><br />
-    <button onclick="showTable()">Submit</button>
+    <button onclick="showTable()">Submit</button><br />
     <p id="res"></p>
 
     <script>
@@ -19,13 +19,10 @@
         startnum = document.getElementById("ip2").value;
         endnum = document.getElementById("ip3").value;
 
-        for (i = 1; i <= 10; i++) {
-          // document.getElementById("res").innerHTML +=i * num + "<br>"  // sirf puree table ko print karne ke liye
-
-          if (i == startnum) {
-            document.getElementById("res").innerHTML = num + " * " + i + " = ";
-            document.getElementById("res").innerHTML += i * num;
-          }
+        for (i = startnum; i <= endnum; i++) {
+          document.getElementById("res").innerHTML += num + "*" + i + "=" ;
+            
+          document.getElementById("res").innerHTML += i * num + "<br>";
         }
       }
     </script>
